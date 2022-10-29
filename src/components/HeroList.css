@@ -1,0 +1,25 @@
+li {
+    list-style: none;
+
+}
+
+.hero-list { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60vw;
+}
+
+.images-heroes {
+    width: 200px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 8px;
+    padding-left: 8px;
+    transition: transform 0.075s ease-in-out;
+}
+
+.images-heroes:hover {
+    transform: scale(1.33);
+    cursor: pointer;
+}

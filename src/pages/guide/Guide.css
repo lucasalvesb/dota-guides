@@ -1,0 +1,40 @@
+.guide {
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.guide ul {
+    padding: 0;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.guide li {
+    list-style-type: none;
+    margin-right: 10px;
+    color: #777;
+    margin-top: 10px;
+}
+
+.guide li::after {
+    content: ",";
+}
+
+.guide li:last-child::after {
+    content: ".";
+}
+
+.style {
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.guide.dark { 
+    background: #555;
+    color: #e4e4e4;
+}
+
