@@ -5,6 +5,7 @@ import  data  from '../../components/HeroList';
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import { useTheme } from '../../hooks/useTheme'
+import HeroList from '../../components/HeroList'
 
 
 
@@ -47,16 +48,10 @@ export default function Hero() {
         setLoading(false);
     })
     }, []);
-    
+
     return (
         <div className="hero-info">
-            {data && data.map(item => {
-                return (
-                    <div className="hero-card">
-                        <h2>{item.localized_name} </h2>
-                    </div>
-                )
-            })}
+            {data && <HeroList heroes={data}/>}
         </div>
     )
 }

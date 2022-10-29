@@ -6,39 +6,36 @@ import { Link } from 'react-router-dom'
 
 export default function Heroes({ heroes }) {
 
-    const [data, setData] = useState(null)
-    const [isPending, setIsPending] = useState(false)
-    const [error, setError] = useState(false)
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        setIsPending(true)
-
-        const unsub = projectFirestore.collection('heroes').onSnapshot((snapshot) => {
-            if (snapshot.empty) {
-                setError('No heroes to load')
-                setIsPending(false)
-            } else {
-                let results = [] 
-                snapshot.docs.forEach(doc => {
-                    results.push({ id: doc.id, ...doc.data() })
-                })
-                setData(results)
-                setIsPending(false)
-            }
-        }, (err) => {
-            setError(err.message)
-            setIsPending(false)
-        })
-
-        return () => unsub()
-
-    }, [])
+    fetch(`https://api.opendota.com/api/heroStats`)
+    .then((response) => {
+        if (!response.ok) {
+        throw new Error(
+            `This is an HTTP error: The status is ${response.status}`
+        )
+    }
+    return response.json();
+    })
+    .then((actualData) => {
+        setData(actualData);
+        setError(null);
+    })
+    .catch((err) => {
+        setError(err.message);
+        setData(null);
+    })
+    .finally(() => {
+        setLoading(false);
+    })
+    }, []);
 
     return (
         <div className="home">
             <h1> Select your hero: </h1>
-            {error && <p className="error">{error}</p>}
-            {isPending && <p className="loading">Loading...</p>}
             {data && <HeroList heroes={data}/>}
         </div>
     )
