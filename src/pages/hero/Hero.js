@@ -51,8 +51,13 @@ export default function Hero() {
 
     return (
         <div className="hero-info">
-            {data && <HeroList heroes={data}/>}
+            {data && (
+                <>
+                    <h2 className="hero-name">{data.localized_name}</h2>
+                    
+                </>
+            )}
         </div>
-    )
+    ) 
 }
 
