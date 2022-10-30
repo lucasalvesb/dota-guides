@@ -33,9 +33,7 @@ return response.json();
 })
 }, []);
 
-const handleClick = () => {
-    data && data.push
-}
+
 
 return (
     <div className="HeroList">
@@ -44,7 +42,7 @@ return (
         <div>{`There was a problem to fetch the data! ${error}`}</div>
     )}
     <div className="hero-list">
-    {data && data.sort((a, b) => a.localized_name.localeCompare(b.localized_name)).map(item => <Link to={`/heroes/${item.localized_name}`}><img className="images-heroes" src={'https://api.opendota.com'+item.img} onClick={ handleClick() }/> </Link>)}
+    {data && data.sort((a, b) => a.localized_name.localeCompare(b.localized_name)).map(item => <Link to={`/heroes/${item.localized_name}`}><img className="images-heroes" src={'https://api.opendota.com'+item.img}/> </Link>)}
     </div>
     </div>
 );
