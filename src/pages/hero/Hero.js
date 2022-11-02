@@ -13,7 +13,7 @@ export default function Hero() {
     const { name } = useParams()
 
     useEffect(() => {
-        
+
         return () => {
             
         <div className="hero-info">
