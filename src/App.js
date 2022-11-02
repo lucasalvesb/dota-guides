@@ -21,21 +21,19 @@ function App() {
   const { mode } = useTheme()
 
   return (
-    <div className={`App ${mode}`}>
-      <BrowserRouter>
-        <Navbar />
-        <ThemeSelector />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/heroes" element={<Heroes />}/>
-          <Route path="/heroes/:name" element={<Hero />}/>
-          <Route path="/create" element={<Create />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/guides/:id" element={<Guide />} />
-          <Route path="/guidedata" element={<GuideData />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+        <div className={`App ${mode}`}>
+          <Navbar />
+          <ThemeSelector />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/heroes" element={<Heroes />}/>
+            <Route path="/heroes/:name" element={<Hero />}/>
+            <Route path="/create" element={<Create />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/guides/:id" element={<Guide />} />
+            <Route path="/guidedata" element={<GuideData />} />
+          </Routes>
+        </div>
   );
 }
 
