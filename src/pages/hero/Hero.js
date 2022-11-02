@@ -25,7 +25,7 @@ export default function Hero() {
         <h1> {selectedHero.localized_name} </h1>
         <p> {selectedHero.primary_attr}</p>
         <p> {selectedHero.attack_type}</p>
-        <ul className="hero-roles"><li >{selectedHero.roles}</li></ul>
+        <ul ><li className="hero-roles">{selectedHero.roles}</li></ul>
         </div>
         
     ) 
