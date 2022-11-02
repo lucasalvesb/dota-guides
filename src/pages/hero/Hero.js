@@ -8,20 +8,25 @@ import './Hero.css'
 
 export default function Hero() {
 
-    const [name, setName] = useState('')
-    const [attack, setAttack] = useState('')
-    const [attribute, setAttribute] = useState('')
-    const [roles, setRoles] = useState('')
+    const { selectedHero, heroes, setSelectedHero, setHeroes } = useContext(HeroContext)
 
-    const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);   
-    const { localized_name } = useParams()
+    const { name } = useParams()
 
-    const { selectedHero, heroes } = useContext(HeroContext)
-
+    useEffect(() => {
+        
+        return () => {
+            
+        <div className="hero-info">
+        <img src={"https://api.opendota.com" + heroes.img}/>
+        <h1> {heroes.localized_name} </h1>
+        <p> {heroes.primary_attr}</p>
+        <p> {heroes.attack_type}</p>
+        <ul className="hero-roles"><li >{heroes.roles}</li></ul>
+        </div>}
+    }, [{name}])
 
     return (
+        
         <div className="hero-info">
         <img src={"https://api.opendota.com" + selectedHero.img}/>
         <h1> {selectedHero.localized_name} </h1>

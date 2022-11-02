@@ -28,7 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/heroes" element={<Heroes />}/>
-          <Route path="/heroes/:localized_name" element={<Hero />}/>
+          <Route path="/heroes/:name" element={<Hero />}/>
           <Route path="/create" element={<Create />} />
           <Route path="/search" element={<Search />} />
           <Route path="/guides/:id" element={<Guide />} />

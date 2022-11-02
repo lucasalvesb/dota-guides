@@ -24,7 +24,7 @@ export default function Guide() {
                 setIsPending(false)
                 setGuide(doc.data())
             } else {
-                setError('Recipe not found!')
+                setError('Guide not found!')
                 setIsPending(false)
                 
             }
