@@ -1,0 +1,12 @@
+.hero-info {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 60vw;
+    margin: auto;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.hero-roles {
+    display: block;
+}

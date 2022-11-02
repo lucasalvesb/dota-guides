@@ -1,13 +1,6 @@
-import { useNavigate } from 'react-router-dom'
-import { projectFirestore } from '../../firebase/config'
-import { useState, useEffect, useRef } from "react";
-import  data  from '../../components/HeroList';
-import { Link } from 'react-router-dom'
+import { useState, useEffect, useRef, useContext } from "react";
+import { HeroContext } from "../../context/HeroContext";
 import { useParams } from 'react-router-dom'
-import { useTheme } from '../../hooks/useTheme'
-import HeroList from '../../components/HeroList'
-
-
 
 // styles
 
@@ -20,43 +13,21 @@ export default function Hero() {
     const [attribute, setAttribute] = useState('')
     const [roles, setRoles] = useState('')
 
-
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);   
+    const { localized_name } = useParams()
 
+    const { selectedHero, heroes } = useContext(HeroContext)
 
-    useEffect(() => {
-    fetch(`https://api.opendota.com/api/heroStats`)
-    .then((response) => {
-        if (!response.ok) {
-        throw new Error(
-            `This is an HTTP error: The status is ${response.status}`
-        )
-    }
-    return response.json();
-    })
-    .then((actualData) => {
-        setData(actualData);
-        setError(null);
-    })
-    .catch((err) => {
-        setError(err.message);
-        setData(null);
-    })
-    .finally(() => {
-        setLoading(false);
-    })
-    }, []);
 
     return (
         <div className="hero-info">
-            {data && (
-                <>
-                    <h2 className="hero-name">{data.localized_name}</h2>
-                    
-                </>
-            )}
+        <img src={"https://api.opendota.com" + selectedHero.img}/>
+        <h1> {selectedHero.localized_name} </h1>
+        <p> {selectedHero.primary_attr}</p>
+        <p> {selectedHero.attack_type}</p>
+        <ul className="hero-roles"><li >{selectedHero.roles}</li></ul>
         </div>
     ) 
 }

@@ -15,6 +15,7 @@ import HeroList from './components/HeroList'
 import Hero from './pages/hero/Hero'
 import Heroes from './pages/heroes/Heroes'
 import { useTheme } from './hooks/useTheme'
+import { heroContext } from '../src/context/HeroContext'
 
 function App() {
   const { mode } = useTheme()

@@ -4,7 +4,8 @@ import HeroList from '../../components/HeroList'
 import { Link } from 'react-router-dom'
 
 
-export default function Heroes({ heroes }) {
+
+export default function Heroes() {
 
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -36,7 +37,10 @@ export default function Heroes({ heroes }) {
     return (
         <div className="home">
             <h1> Select your hero: </h1>
-            {data && <HeroList heroes={data}/>}
+            {data && <HeroList heroes={data} />}
+            
         </div>
+        
     )
+
 }
