@@ -10,6 +10,7 @@ export default function Hero() {
     const { selectedHero, setSelectedHero, heroes, loading } = useContext(HeroContext)   
     const { name } = useParams()   
 
+
     useEffect(() => {       
         if (name && heroes) {
             const hero = heroes.find(hero => name === hero.localized_name) // acha o selected hero
@@ -19,13 +20,21 @@ export default function Hero() {
 
     if (loading || !selectedHero) return <p>Loading...</p>
 
+
+    
     return (
+        
         <div className="hero-info">
-        <img src={"https://api.opendota.com" + selectedHero.img}/>
+        <img className="hero-img" src={"https://api.opendota.com" + selectedHero.img}/>
         <h1> {selectedHero.localized_name} </h1>
-        <p> {selectedHero.primary_attr}</p>
+        <p className="title-hero-page">Primary attribute:</p>
+        <p> {selectedHero.primary_attr.charAt(0).toUpperCase()+selectedHero.primary_attr.slice(1)}</p> 
+        <p className="title-hero-page"> Attack type: </p>
         <p> {selectedHero.attack_type}</p>
-        <ul ><li className="hero-roles">{selectedHero.roles}</li></ul>
+        <ul className="hero-roles-ul">
+            <p className="title-hero-page">Roles:</p>
+            {selectedHero.roles.map(item => <li className="hero-roles">{item}</li>)}
+        </ul>
         </div>
         
     ) 

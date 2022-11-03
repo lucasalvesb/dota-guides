@@ -5,3 +5,8 @@
 .App.dark {
   background: #333;
 }
+
+.App.dark {
+  color: rgb(232, 219, 219);
+}
+

@@ -1,9 +1,30 @@
 .hero-info {
     flex-direction: column;
     flex-wrap: wrap;
-    width: 60vw;
-    margin: auto;
+    width: 35vw;
+    align-items: center;
+    margin-left: 165px;
     border: 2px solid black;
     text-align: center;
+    padding-bottom: 25px;
 }
 
+
+.hero-roles {
+    list-style-type: none;
+}
+
+.hero-roles-ul {
+    padding: 0;
+    margin: 0;
+}
+
+.hero-img {
+    margin-top: 25px;
+    border: 2px solid black;
+}
+
+.title-hero-page{
+    font-weight: bold;
+    padding-top: 10px;
+}

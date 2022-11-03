@@ -18,7 +18,7 @@ import { useTheme } from './hooks/useTheme'
 import { heroContext } from '../src/context/HeroContext'
 
 function App() {
-  const { mode } = useTheme()
+  const { mode, text } = useTheme()
 
   return (
         <div className={`App ${mode}`}>
