@@ -1,11 +1,20 @@
-
-
 .hero-list { 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 60vw;
+    width: 65vw;
 }
+
+@media (max-width: 1350px) {
+    .hero-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80vw;
+    }
+}
+
+
 
 .images-heroes {
     width: 200px;
@@ -14,6 +23,17 @@
     padding-right: 8px;
     padding-left: 8px;
     transition: transform 0.075s ease-in-out;
+}
+
+@media (max-width: 900px) {
+    .images-heroes {
+        width: 90px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-right: 4px;
+        padding-left: 4px;
+        transition: transform 0.075s ease-in-out;
+    }
 }
 
 .images-heroes:hover {
