@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/dota-guides/static/css/main.f2464488.chunk.css",
+    "main.js": "/dota-guides/static/js/main.30bd38fc.chunk.js",
+    "main.js.map": "/dota-guides/static/js/main.30bd38fc.chunk.js.map",
+    "runtime-main.js": "/dota-guides/static/js/runtime-main.c05b762a.js",
+    "runtime-main.js.map": "/dota-guides/static/js/runtime-main.c05b762a.js.map",
+    "static/js/2.bfad7ea7.chunk.js": "/dota-guides/static/js/2.bfad7ea7.chunk.js",
+    "static/js/2.bfad7ea7.chunk.js.map": "/dota-guides/static/js/2.bfad7ea7.chunk.js.map",
+    "index.html": "/dota-guides/index.html",
+    "static/css/main.f2464488.chunk.css.map": "/dota-guides/static/css/main.f2464488.chunk.css.map",
+    "static/js/2.bfad7ea7.chunk.js.LICENSE.txt": "/dota-guides/static/js/2.bfad7ea7.chunk.js.LICENSE.txt",
+    "static/media/mode-icon.18c28fe1.svg": "/dota-guides/static/media/mode-icon.18c28fe1.svg",
+    "static/media/trashcan.3270f2c9.svg": "/dota-guides/static/media/trashcan.3270f2c9.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c05b762a.js",
+    "static/js/2.bfad7ea7.chunk.js",
+    "static/css/main.f2464488.chunk.css",
+    "static/js/main.30bd38fc.chunk.js"
+  ]
+}
