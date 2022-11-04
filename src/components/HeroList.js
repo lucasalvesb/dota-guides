@@ -10,7 +10,7 @@ export default function HeroList() {
 
   return (
     <div className="HeroList">
-      {loading && <div> Loading... </div>}
+      {loading && <div> Loading... Thank you for waiting! </div>}
       {error && <div>{`There was a problem to fetch the data! ${error}`}</div>}
       <div className="hero-list">
         {heroes &&
