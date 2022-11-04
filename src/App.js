@@ -25,7 +25,7 @@ function App() {
           <Navbar />
           <ThemeSelector />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="" element={<Home />} />
             <Route path="/heroes" element={<Heroes />}/>
             <Route path="/heroes/:name" element={<Hero />}/>
             <Route path="/create" element={<Create />} />
