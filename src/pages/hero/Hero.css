@@ -1,26 +1,23 @@
 .hero-info {
     flex-direction: column;
-    flex-wrap: wrap;
-    width: 30em;
+    width: 15em;
     align-items: center;
     margin: auto;
     border: 2px solid black;
     text-align: center;
-    padding-bottom: 25px;
+    background-color: rgb(233, 233, 233);
+    padding-bottom: 1.2em;
 }
 
 @media (max-width: 768px) {
     .hero-info {
         flex-direction: column;
-
         width: 15em;
         align-items: center;
         margin-left: auto;
         margin-right: auto;
-        border: 2px solid black;
+        border: 1.5px solid black;
         text-align: center;
-        padding-bottom: 25px;
-        margin-bottom: 10px;
         }
 }
 
@@ -37,7 +34,7 @@
 }
 
 .hero-img {
-    margin-top: 25px;
+    margin-top: 1.2em;
     border: 2px solid black;
     
 }
