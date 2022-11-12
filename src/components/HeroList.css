@@ -1,10 +1,8 @@
-
-
 .hero-list { 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 65vw;
+    width: 70vw;
 }
 
 @media (min-width: 3800px) {
@@ -17,16 +15,17 @@
 }
 
 
-@media (max-width: 1999px) {
+
+@media (max-width: 1052px) {
     .hero-list {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 80vw;
+        width: 85vw;
     }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 603px) {
     .hero-list {
         display: flex;
         flex-direction: row;
@@ -36,7 +35,7 @@
 }
 
 .images-heroes {
-    width: 10em;
+    width: 7.5em;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 8px;
