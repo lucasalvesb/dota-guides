@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom'
 import { useFetch } from '../../hooks/useFetch'
+import GuideList from './../../components/GuideList'
 
 // styles
 import './Search.css'
@@ -19,10 +20,10 @@ export default function Search() {
 
     return (
         <div>
-            <h2 className="page-title">Recipes including "{query}"</h2>
+            <h2 className="page-title">Guides found with "{query}"</h2>
             {error && <p className="error">{error}</p>}
             {isPending && <p className="loading">Loading...</p>}
-            {data && <GuideData guides={data} />}
+            {data && <GuideList guides={data} />}
         </div>
     )
 }

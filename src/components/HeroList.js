@@ -9,7 +9,7 @@ export default function HeroList() {
   const { heroes, loading, error, setHeroes, setSelectedHero } = useContext(HeroContext);
 
   return (
-    <div className="HeroList">
+    <div className="box-hero-list">
       {loading && <div> Loading... </div>}
       {error && <div>{`There was a problem to fetch the data! ${error}`}</div>}
       <div className="hero-list">

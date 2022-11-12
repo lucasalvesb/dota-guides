@@ -43,7 +43,7 @@ export const useFetch = (url, method = "GET") => {
     }
 
     if (method === "GET") {
-      fetchData ()
+      fetchData()
     }
 
     if (method === "POST" && options) {
