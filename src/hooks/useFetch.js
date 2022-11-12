@@ -6,6 +6,8 @@ export const useFetch = (url, method = "GET") => {
   const [error, setError] = useState(null)
   const [options, setOptions] = useState(null)
 
+
+  
   const postData = (postData) => {
     setOptions({
       method: "POST",
@@ -28,6 +30,7 @@ export const useFetch = (url, method = "GET") => {
           throw new Error(res.statusText)
         }
         const data = await res.json()
+        data.header('Access-Control-Allow-Origin', '*')
 
         setIsPending(false)
         setData(data)
