@@ -54,6 +54,17 @@
         }
 }
 
+@media (max-width: 500px) {
+    .images-heroes {
+        width: 2em;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 8px;
+        padding-left: 8px;
+        transition: transform 0.075s ease-in-out;
+    }
+}
+
 .images-heroes:hover {
     transform: scale(1.33);
     cursor: pointer;
