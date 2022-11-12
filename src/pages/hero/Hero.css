@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     width: 30em;
     align-items: center;
-    margin-left: 165px;
+    margin: auto;
     border: 2px solid black;
     text-align: center;
     padding-bottom: 25px;
@@ -15,12 +15,14 @@
 
         width: 15em;
         align-items: center;
-        margin-left: 20px;
+        margin: auto;
         border: 2px solid black;
         text-align: center;
         padding-bottom: 25px;
         }
 }
+
+
 
 
 .hero-roles {
