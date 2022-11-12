@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 // styles
 import './App.css'
@@ -11,11 +11,10 @@ import Search from './pages/search/Search'
 import GuideData from './pages/guidedata/GuideData'
 import Guide from './pages/guide/Guide'
 import ThemeSelector from './components/ThemeSelector'
-import HeroList from './components/HeroList'
 import Hero from './pages/hero/Hero'
 import Heroes from './pages/heroes/Heroes'
 import { useTheme } from './hooks/useTheme'
-import { heroContext } from '../src/context/HeroContext'
+
 
 function App() {
   const { mode, text } = useTheme()

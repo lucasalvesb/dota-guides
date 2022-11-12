@@ -12,7 +12,7 @@ export default function Heroes() {
 
     return (
         <div className="home">
-            <h1> Select your hero: </h1>
+            <h1 className="text-title"> Select your hero: </h1>
             <HeroList heroes={heroes} />            
         </div>
         
