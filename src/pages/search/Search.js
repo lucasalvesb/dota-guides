@@ -14,7 +14,7 @@ export default function Search() {
     const queryParams = new URLSearchParams(queryString)
     const query = queryParams.get('q')
 
-    const url = 'http://localhost:3000/guides?q=' + query
+    const url = 'https://dota-guides.netlify.app/guidedata?q=' + query
     const { error, isPending, data } = useFetch(url)
 
 
