@@ -29,7 +29,7 @@ export default function Navbar() {
             </a>
             <h1 className="title-name">DOTA GUIDES </h1>
             <nav ref={navRef}>
-                
+                <div className="container-left">
                 <Link to="/" className="brand">
                     <h1 className="h1-navbar"> Homepage </h1>
                 </Link>
@@ -39,8 +39,11 @@ export default function Navbar() {
                 <Link to="/guidedata" className="brand">
                     <h1 className="h1-navbar"> Guides </h1>
                 </Link>
+                </div>
+                <div className="container-right">
                 <Searchbar className="searchbar"/>
-                <Link to="/create" className="brand"> <span> Create Guide </span></Link>
+                <Link to="/create" className="brand"> <span className="create-guide-btn"> Create Guide </span></Link>
+                </div>
             </nav>
         </div>
     )

@@ -4,52 +4,57 @@
 
 .navbar {
     background: #58249c;
-    padding: 17px;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 9px;
+    padding-bottom: 9px;
     color: #fff;
     transition: 0.3s;
 }
 
+.container-left {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-right {
+    display: flex;
+    margin-left: auto;
+}
 
 .navbar nav {
     display: flex;
     align-items: center;
     margin: 0 auto;
     width: 100%;
-    justify-content: flex-start;
     
 }
-
-.h1-navbar {
-    display: flex;
-    align-items: left;
-    margin: auto;
-    text-align: left;
-    justify-content: flex-start;
-}
-
-
 
 .navbar a.brand {
     margin: auto;
     color: #fff;
     text-decoration: none;
     font-size: 0.7em;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .navbar a.brand:hover {
     color: rgb(0, 0, 0);
 }
 
-.navbar a:last-child {
+
+.create-guide-btn {
+    display: block;
     color: #fff;
     text-decoration: none;
-    margin-left: 40px;
+    margin-left: 0;
     padding: 8px;
     border: 1px solid #fff;
     border-radius: 4px;
 }
 
-.navbar a:last-child:hover {
+.create-guide-btn:hover {
     background: #fff;
     color: #333;
 }
@@ -76,20 +81,16 @@
 .title-name {
     width: 100%;
     display: none;
-        }
-    
-.navbar a:last-child {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 0;
-    padding: 8px;
-    border: 1px solid #fff;
-    border-radius: 4px;
-    margin: auto;
-        }
+}
+
+.searchbar {
+    padding-right: 15px;
+}
 
 
-@media (max-width: 900px) {
+
+
+@media (max-width: 920px) {
     .toggle-button {
         display: flex;
         
@@ -105,40 +106,35 @@
         padding-bottom: 5px;
     }
 
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        transition: 0.3s;
-    }
-
-    .navbar nav:not(.searchbar) {
+    .navbar nav {
+        display: flex;
         flex-direction: column;
         display: none;
     }
 
 
     .navbar nav.active {
+        display: flex;
         flex-direction: column;
-        display: flex;
-        }
+    }
     
+    .container-left {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+}
 
-    .navbar a:last-child {
-        color: #fff;
-        text-decoration: none;
-        margin-left: 0;
-        padding: 8px;
-        border: 1px solid #fff;
-        border-radius: 4px;
-        margin-top: 10px;
-        margin-left: auto;
-        margin-right: auto;
-        }
-    
-    .searchbar {
+    .container-right {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+        padding-top: 5px;
+}
+
+    .create-guide-btn {
         margin-top: 10px;
-        margin-bottom: 10px;
     }
 }
 
