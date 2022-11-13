@@ -31,13 +31,13 @@ export default function Navbar() {
             <nav ref={navRef}>
                 
                 <Link to="/" className="brand">
-                    <h1> Homepage </h1>
+                    <h1 className="h1-navbar"> Homepage </h1>
                 </Link>
                 <Link to="/heroes" className="brand">
-                    <h1> Heroes </h1>
+                    <h1 className="h1-navbar"> Heroes </h1>
                 </Link>
                 <Link to="/guidedata" className="brand">
-                    <h1> Guides </h1>
+                    <h1 className="h1-navbar"> Guides </h1>
                 </Link>
                 <Searchbar className="searchbar"/>
                 <Link to="/create" className="brand"> <span> Create Guide </span></Link>

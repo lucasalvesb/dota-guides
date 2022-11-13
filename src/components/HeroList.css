@@ -16,7 +16,7 @@
 
 
 
-@media (max-width: 1052px) {
+@media (max-width: 1320px) {
     .hero-list {
         display: flex;
         flex-direction: row;
@@ -43,7 +43,7 @@
     transition: transform 0.075s ease-in-out;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1320px) {
     .images-heroes {
             width: 5em;
             padding-top: 5px;

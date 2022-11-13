@@ -6,6 +6,7 @@
     background: #58249c;
     padding: 17px;
     color: #fff;
+    transition: 0.3s;
 }
 
 
@@ -13,7 +14,20 @@
     display: flex;
     align-items: center;
     margin: 0 auto;
+    width: 100%;
+    justify-content: flex-start;
+    
 }
+
+.h1-navbar {
+    display: flex;
+    align-items: left;
+    margin: auto;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+
 
 .navbar a.brand {
     margin: auto;
@@ -49,6 +63,7 @@
     justify-content: space-between;
     width: 30px;
     height: 21px;
+    
 }
 
 .toggle-button .bar {
@@ -77,6 +92,7 @@
 @media (max-width: 900px) {
     .toggle-button {
         display: flex;
+        
 
     }
 
@@ -92,6 +108,7 @@
     .navbar {
         flex-direction: column;
         align-items: flex-start;
+        transition: 0.3s;
     }
 
     .navbar nav:not(.searchbar) {
@@ -113,11 +130,15 @@
         padding: 8px;
         border: 1px solid #fff;
         border-radius: 4px;
-        margin:auto;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
         }
     
-    .searchbar-component {
+    .searchbar {
         display: flex;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
 
