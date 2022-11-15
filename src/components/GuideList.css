@@ -1,20 +1,24 @@
 .recipe-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fill, 16em);
     max-width: 1200px;
     margin: 40px auto;
+    flex-wrap: wrap;
 }
+
 
 
 .recipe-list .card {
     background: #fff;
     color: #333;
-    padding: 20px;
+    padding: 0.7em;
+    max-width: 14em;
     border-radius: 4px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     position: relative;
+    margin-left: 1em;
+    margin-top: 1em;
 }
 
 .recipe-list .card:hover {
@@ -62,10 +66,10 @@
     font-size: 0.9em;
     width: 100px;
     text-align: center;
-    width: 120px;
+    width: 8em;
     padding: 8px;
     border-radius: 4px;
-    margin: 20px auto 0;
+    margin: 1em auto 0;
 }
 
 .recipe-list .card.dark {

@@ -1,6 +1,7 @@
 import { projectFirestore } from '../../firebase/config'
 import { useEffect, useState } from 'react'
 import GuideList from '../../components/GuideList'
+import './GuideData.css'
 
 export default function GuideData() {
 
@@ -34,7 +35,7 @@ export default function GuideData() {
 
     return (
         <div className="home">
-            <h1> Select your guide: </h1>
+            <h1 className="title-select"> Select your guide: </h1>
             {error && <p className="error">{error}</p>}
             {isPending && <p className="loading">Loading...</p>}
             {data && <GuideList guides={data}/>}

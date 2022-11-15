@@ -23,7 +23,7 @@ export default function GuideList({ guides }) {
         <div className="recipe-list">
             {guides.map(guide => (
                 <div key={guide.id} className={`card ${mode}`}> 
-                    <h3>{guide.title}</h3>
+                    <h3 className="title-guide">{guide.title}</h3>
                     <p>{guide.spike} to reach spike.</p>
                     <Link to={`/guides/${guide.id}`}>Read this</Link>
                     <img
