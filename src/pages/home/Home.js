@@ -12,7 +12,7 @@ export default function Home() {
 
     return (
         <div className="home">
-            <h1> Welcome to the best website ever </h1>
+            <h1> DOTA 2 GUIDES </h1>
         </div>
     )
 }

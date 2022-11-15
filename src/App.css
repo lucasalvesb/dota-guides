@@ -1,12 +1,45 @@
 .App {
   min-height: 100%;
+  position: relative;
+}
+
+.App:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background-image: url('https://images8.alphacoders.com/752/752965.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
 }
 
 .App.dark {
   background: #333;
+  color: rgb(232, 219, 219);
+  position: relative;
 }
 
-.App.dark {
-  color: rgb(232, 219, 219);
+.App.dark:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.35;
+  background-image: url('https://images8.alphacoders.com/752/752965.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.content {
+  position: relative;
 }
 

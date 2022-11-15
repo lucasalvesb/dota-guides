@@ -21,6 +21,7 @@ function App() {
 
   return (
         <div className={`App ${mode}`}>
+            <div className="content">
           <Navbar />
           <ThemeSelector />
           <Routes>
@@ -32,6 +33,7 @@ function App() {
             <Route path="/guides/:id" element={<Guide />} />
             <Route path="/guidedata" element={<GuideData />} />
           </Routes>
+          </div>
         </div>
   );
 }
