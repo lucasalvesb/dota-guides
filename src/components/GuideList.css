@@ -84,6 +84,10 @@
     .recipe-list .card a {
         font-size: 0.7em;
     }
+
+    .recipe-list .card {
+        margin-right: 1em;
+    }
 }
 
 .recipe-list .card.dark {
