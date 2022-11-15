@@ -17,6 +17,29 @@ h1,h2,h3,p {
 
 h1 {
   padding-left: 0.7em;
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 0.9em;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.3em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 0.8em;
+  }
 }
 
 input, textarea {

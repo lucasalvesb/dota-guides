@@ -1,4 +1,10 @@
 .home {
     max-width: 1200px;
-    margin: 60px auto;
+    margin: 2em auto;
+}
+
+@media (min-width: 3800px) {
+    .home {
+        max-width: 80%;
+    }
 }

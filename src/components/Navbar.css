@@ -79,7 +79,6 @@
 }
 
 .title-name {
-    width: 100%;
     display: none;
 }
 
@@ -90,7 +89,7 @@
 
 
 
-@media (max-width: 920px) {
+@media (max-width: 937px) {
     .toggle-button {
         display: flex;
         
