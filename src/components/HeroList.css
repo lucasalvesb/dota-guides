@@ -3,6 +3,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 70vw;
+    margin-left: 1em;
 }
 
 @media (min-width: 3800px) {
