@@ -5,6 +5,7 @@
     padding: 1em;
     background-color: rgba(250, 246, 246, 0.717);
     color: rgb(31, 30, 30);
+    border-radius: 12px;
 }
 
 .create.dark {
@@ -14,6 +15,7 @@
     padding: 1em;
     background-color: rgba(36, 32, 32, 0.42);
     color: rgb(232, 219, 219);
+    border-radius: 12px;
 }
 
 .create button {
@@ -86,3 +88,10 @@
     margin: 0 0 0 10px;
 }
 
+.page-title.dark {
+    color: rgb(232, 219, 219);
+}
+
+.page-title.light {
+    color: rgb(31, 30, 30);
+}

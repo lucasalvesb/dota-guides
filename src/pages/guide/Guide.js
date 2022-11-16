@@ -56,7 +56,7 @@ export default function Guide() {
             {isPending && <p className="loading">Loading...</p>}
             {guide && (
                 <>
-                    <h2 className="page-title">{guide.title}</h2>
+                    <h2 className={`page-title ${ mode } `}>{guide.title}</h2>
                     <p> Takes {guide.spike} to reach power spike.</p>
                     <ul className="list-name">
                         <strong> Recommended items:</strong> {guide.items.map(ing => <li key={ing}>{ing}</li>)}

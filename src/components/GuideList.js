@@ -10,6 +10,7 @@ import './GuideList.css'
 
 export default function GuideList({ guides }) {
     const { mode } = useTheme()
+    const { color } = useTheme()
     
     if (guides.length === 0) {
         return <div className="error">There are none!</div>
@@ -26,7 +27,7 @@ export default function GuideList({ guides }) {
                 <div key={guide.id} className={`card ${mode}`}> 
                     <h3 className="title-guide">{guide.title}</h3>
                     <p>{guide.spike} to reach spike.</p>
-                    <Link to={`/guides/${guide.id}`}>Read this</Link>
+                    <Link className={`button-read ${mode}`} style={{ background: color}} to={`/guides/${guide.id}`}>Read this</Link>
                     <img
                         className={`delete ${mode}`}
                         src={Trashcan}

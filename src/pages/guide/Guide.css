@@ -5,6 +5,7 @@
     background: #fff;
     padding: 10px;
     box-sizing: border-box;
+    border-radius: 12px;
 }
 
 .button-seen {

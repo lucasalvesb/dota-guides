@@ -14,7 +14,20 @@
 
 
 
-.recipe-list .card {
+.recipe-list .card.light {
+    background-color: rgba(250, 246, 246, 0.717);
+    padding: 0.7em;
+    max-width: 14em;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.21);
+    transition: all 0.3s ease;
+    position: relative;
+    margin-left: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.recipe-list .card.dark {
     background-color: rgba(250, 246, 246, 0.717);
     padding: 0.7em;
     max-width: 14em;
@@ -66,7 +79,7 @@
 }
 
 .recipe-list .card a {
-    color: #555;
+    color: rgb(232, 219, 219);
     text-decoration: none;
     display: block;
     background: #e2e2e2;
@@ -79,6 +92,10 @@
     margin: 1em auto 0;
 }
 
+
+
+
+
 @media (max-width: 500px) {
     .recipe-list .card a {
         font-size: 0.7em;
@@ -90,7 +107,7 @@
 }
 
 .recipe-list .card.dark {
-    background: #555;
+    background: rgba(36, 32, 32, 0.758);
 }
 
 .recipe-list .card.dark p,

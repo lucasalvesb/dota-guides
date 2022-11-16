@@ -49,7 +49,7 @@ export default function Create() {
     return (
         <div>
             <div className={`create ${mode}`}>
-                <h2 className="page-title">Add a new guide</h2>
+                <h2 className={`page-title ${mode}`}>Add a new guide</h2>
                 <form onSubmit={handleSubmit}>
                     <label>
                         <span>Hero:</span>
