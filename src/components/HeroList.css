@@ -41,16 +41,17 @@
     padding-bottom: 5px;
     padding-right: 8px;
     padding-left: 8px;
+    border-radius: 13px;
     transition: transform 0.075s ease-in-out;
 }
 
 @media (max-width: 1320px) {
     .images-heroes {
             width: 5em;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            padding-right: 8px;
-            padding-left: 8px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-right: 7px;
+            padding-left: 7px;
             transition: transform 0.075s ease-in-out;
         }
 }

@@ -1,11 +1,22 @@
-.hero-info {
+.hero-info.light {
     flex-direction: column;
     width: 15em;
     align-items: center;
     margin: auto;
-    border: 2px solid black;
+    border-radius: 12px;
     text-align: center;
-    background-color: rgba(61, 54, 54, 0);
+    background-color: rgba(250, 246, 246, 0.717);
+    padding-bottom: 1.2em;
+}
+
+.hero-info.dark {
+    flex-direction: column;
+    width: 15em;
+    align-items: center;
+    margin: auto;
+    border-radius: 12px;
+    text-align: center;
+    background-color: rgba(36, 32, 32, 0.42);
     padding-bottom: 1.2em;
 }
 
@@ -20,7 +31,7 @@
         align-items: center;
         margin-left: auto;
         margin-right: auto;
-        border: 1.5px solid black;
+        border-radius: 12px;
         text-align: center;
         }
 }
@@ -39,7 +50,7 @@
 
 .hero-img {
     margin-top: 1.2em;
-    border: 2px solid black;
+    border-radius: 7px;
     
 }
 

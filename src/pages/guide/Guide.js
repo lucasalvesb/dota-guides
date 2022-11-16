@@ -62,7 +62,7 @@ export default function Guide() {
                         <strong> Recommended items:</strong> {guide.items.map(ing => <li key={ing}>{ing}</li>)}
                     </ul>
                     <p className="style">How to play: {guide.style}</p>
-                    <button onClick={ handleClick }>{buttonText}</button>
+                    <button className="button-seen" onClick={ handleClick }>{buttonText}</button>
                 </>
             )}
         </div>

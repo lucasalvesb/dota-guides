@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useContext } from "react";
 import { HeroContext } from "../../context/HeroContext";
 import { useParams } from 'react-router-dom'
+import { useTheme } from '../../hooks/useTheme'
 
 // styles
 
@@ -9,6 +10,7 @@ import './Hero.css'
 export default function Hero() {
     const { selectedHero, setSelectedHero, heroes, loading } = useContext(HeroContext)   
     const { name } = useParams()   
+    const { mode } = useTheme()
 
 
     useEffect(() => {       
@@ -25,7 +27,7 @@ export default function Hero() {
     return (
         
         <div >
-            <div className="hero-info">
+            <div className={`hero-info ${mode}`}>
                 <img className="hero-img" src={"https://api.opendota.com" + selectedHero.img}/>
                 <h1> {selectedHero.localized_name} </h1>
                 <p className="title-hero-page">Primary attribute:</p>

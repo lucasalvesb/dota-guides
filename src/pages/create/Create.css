@@ -1,7 +1,61 @@
-.create {
+.create.light {
     color: #555;
-    max-width: 480px;
+    width: 20em;
     margin: 60px auto;
+    padding: 1em;
+    background-color: rgba(250, 246, 246, 0.717);
+    color: rgb(31, 30, 30);
+}
+
+.create.dark {
+    color: #555;
+    width: 20em;
+    margin: 60px auto;
+    padding: 1em;
+    background-color: rgba(36, 32, 32, 0.42);
+    color: rgb(232, 219, 219);
+}
+
+.create button {
+    display: block;
+    width: 100px;
+    font-size: 1em;
+    color: rgb(232, 219, 219);
+    padding: 8px 8px;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.create button:hover {
+    color: black;
+}
+
+
+
+.input-add {
+    margin-right: 0.2em;
+}
+
+@media (max-width: 600px) {
+    .create {
+        width: 15em;
+    }
+
+    .create h2 {
+        font-size: 1em;
+    }
+
+    .create span {
+        font-size: 0.7em;
+    }
+
+    .create button {
+        font-size: 0.7em;
+    }
 }
 
 .create label span {
@@ -14,30 +68,13 @@
     font-size: 0.8em;
 }
 
-.create button {
-    display: block;
-    width: 100px;
-    font-size: 1em;
-    color: #fff;
-    padding: 8px 8px;
-    border: 0;
-    border-radius: 4px;
-    background-color: #58249c;
-    cursor: pointer;
-    text-decoration: none;
-    margin: 20px auto;
-    text-align: center;
-}
 
-.create button:hover {
-    color: black;
-}
 
-.ingredients {
+.items {
     display: flex;
     align-items: center;
 }
 
-.ingredients button {
+.items button {
     margin: 0 0 0 10px;
 }

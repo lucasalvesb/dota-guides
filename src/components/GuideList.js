@@ -4,6 +4,7 @@ import Trashcan from '../assets/trashcan.svg'
 import { projectFirestore } from '../firebase/config'
 import { useEffect, useState } from 'react'
 
+
 // styles
 import './GuideList.css'
 
@@ -27,7 +28,7 @@ export default function GuideList({ guides }) {
                     <p>{guide.spike} to reach spike.</p>
                     <Link to={`/guides/${guide.id}`}>Read this</Link>
                     <img
-                        className="delete"
+                        className={`delete ${mode}`}
                         src={Trashcan}
                         onClick={() => handleClick(guide.id)}
                     />

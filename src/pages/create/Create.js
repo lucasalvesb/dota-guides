@@ -1,10 +1,13 @@
 import { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { projectFirestore } from '../../firebase/config'
+import { useTheme } from '../../hooks/useTheme'
+
 
 // styles
 
 import './Create.css'
+
 
 export default function Create() {
     const [title, setTitle] = useState('')
@@ -14,6 +17,8 @@ export default function Create() {
     const [items, setItem] = useState([])
     const itemInput = useRef(null)
     const navigate = useNavigate()
+    const { mode } = useTheme()
+    const { color } = useTheme()
 
     
 
@@ -42,7 +47,7 @@ export default function Create() {
 
 
     return (
-        <div className="create">
+        <div className={`create ${mode}`}>
             <h2 className="page-title">Add a new guide</h2>
             <form onSubmit={handleSubmit}>
                 <label>
@@ -57,14 +62,15 @@ export default function Create() {
 
                 <label>
                     <span>Items:</span>
-                    <div className="ingredients">
+                    <div className="items">
                         <input 
+                        className="input-add"
                         type="text" 
                         onChange={(e) => setNewItem(e.target.value)}
                         value={newItem}
                         ref={itemInput}
                         />
-                        <button onClick={handleAdd} className="btn">Add</button>
+                        <button onClick={handleAdd} className='btn' style={{ background: color}}>Add</button>
                     </div>
                 </label>
                 <p>Current items: {items.map(i => <em key={i}>{i}, </em>)}</p>
@@ -89,7 +95,7 @@ export default function Create() {
                 </label>
 
                 
-                    <button className="btn">Submit</button>
+                    <button className='btn' style={{ background: color}}>Submit</button>
 
             </form>
         </div>

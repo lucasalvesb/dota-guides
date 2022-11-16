@@ -15,8 +15,7 @@
 
 
 .recipe-list .card {
-    background: #fff;
-    color: #333;
+    background-color: rgba(250, 246, 246, 0.717);
     padding: 0.7em;
     max-width: 14em;
     border-radius: 4px;
@@ -51,16 +50,16 @@
 }
 
 .recipe-list .card h3 {
-    color: #555;
+    color: rgb(58, 55, 55);
     margin-bottom: 6px;
 }
 
 .recipe-list .card p {
-    color: #999;
+    color: rgb(79, 70, 70);
 }
 
 .recipe-list .card div {
-    color: #555;
+    color: rgb(58, 55, 55);
     font-size: 0.7em;
     margin: 20px 0;
     line-height: 1.5em;
@@ -100,12 +99,20 @@
     color: #e4e4e4;
 }
 
-.delete {
+.delete.light {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
-    filter: invert(60%);
+    filter: invert(40%);
+}
+
+.delete.dark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    filter: invert(80%);
 }
 
 
