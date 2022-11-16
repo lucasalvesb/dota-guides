@@ -39,7 +39,7 @@ export default function Hero() {
                     {selectedHero.roles.map(item => <li className="hero-roles">{item}</li>)}
                 </ul>
             </div>
-            <span className="empty-space"></span>
+            <span className="empty-space"><br></br></span>
         </div>
         
     ) 

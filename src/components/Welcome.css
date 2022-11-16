@@ -199,7 +199,3 @@ h2 {
     transform: scale(1.05)
 }
 
-.white-space {
-    display: flex;
-    flex-direction: column;
-}
