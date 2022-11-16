@@ -1,7 +1,7 @@
 .create.light {
     color: #555;
-    width: 20em;
-    margin: 60px auto;
+    max-width: 20em;
+    margin: 3em auto;
     padding: 1em;
     background-color: rgba(250, 246, 246, 0.717);
     color: rgb(31, 30, 30);
@@ -9,15 +9,15 @@
 
 .create.dark {
     color: #555;
-    width: 20em;
-    margin: 60px auto;
+    max-width: 20em;
+    margin: 3em auto;
     padding: 1em;
     background-color: rgba(36, 32, 32, 0.42);
     color: rgb(232, 219, 219);
 }
 
 .create button {
-    display: block;
+    display: flex;
     width: 100px;
     font-size: 1em;
     color: rgb(232, 219, 219);
@@ -41,9 +41,6 @@
 }
 
 @media (max-width: 600px) {
-    .create {
-        width: 15em;
-    }
 
     .create h2 {
         font-size: 1em;
@@ -78,3 +75,4 @@
 .items button {
     margin: 0 0 0 10px;
 }
+

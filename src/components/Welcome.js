@@ -25,5 +25,7 @@ return (
     <h2>COMPLETELY FREE</h2>
     <p>...and it will always be!</p>
     </div>
+    <span className="white-space"><br></br></span>
 </div>
+
 )}   

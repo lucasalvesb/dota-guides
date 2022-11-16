@@ -47,57 +47,60 @@ export default function Create() {
 
 
     return (
-        <div className={`create ${mode}`}>
-            <h2 className="page-title">Add a new guide</h2>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    <span>Hero:</span>
-                    <input 
-                    type="text"
-                    onChange={(e) => setTitle(e.target.value)}
-                    value={title}
-                    required
-                    />
-                </label>
-
-                <label>
-                    <span>Items:</span>
-                    <div className="items">
+        <div>
+            <div className={`create ${mode}`}>
+                <h2 className="page-title">Add a new guide</h2>
+                <form onSubmit={handleSubmit}>
+                    <label>
+                        <span>Hero:</span>
                         <input 
-                        className="input-add"
-                        type="text" 
-                        onChange={(e) => setNewItem(e.target.value)}
-                        value={newItem}
-                        ref={itemInput}
+                        type="text"
+                        onChange={(e) => setTitle(e.target.value)}
+                        value={title}
+                        required
                         />
-                        <button onClick={handleAdd} className='btn' style={{ background: color}}>Add</button>
-                    </div>
-                </label>
-                <p>Current items: {items.map(i => <em key={i}>{i}, </em>)}</p>
+                    </label>
 
-                <label>
-                    <span>Style: </span>
-                    <textarea 
-                    onChange={(e) => setStyle(e.target.value)}
-                    value={style}
-                    required
-                    />
-                </label>
+                    <label>
+                        <span>Items:</span>
+                        <div className="items">
+                            <input 
+                            className="input-add"
+                            type="text" 
+                            onChange={(e) => setNewItem(e.target.value)}
+                            value={newItem}
+                            ref={itemInput}
+                            />
+                            <button onClick={handleAdd} className='btn' style={{ background: color}}>Add</button>
+                        </div>
+                    </label>
+                    <p>Current items: {items.map(i => <em key={i}>{i}, </em>)}</p>
 
-                <label>
-                    <span>Power spike:</span>
-                    <input 
-                    type="number"
-                    onChange={(e) => setSpike(e.target.value)}
-                    value={spike}
-                    required
-                    />
-                </label>
+                    <label>
+                        <span>Style: </span>
+                        <textarea 
+                        onChange={(e) => setStyle(e.target.value)}
+                        value={style}
+                        required
+                        />
+                    </label>
 
-                
-                    <button className='btn' style={{ background: color}}>Submit</button>
+                    <label>
+                        <span>Power spike:</span>
+                        <input 
+                        type="number"
+                        onChange={(e) => setSpike(e.target.value)}
+                        value={spike}
+                        required
+                        />
+                    </label>
 
-            </form>
+                    
+                        <button className='btn' style={{ background: color}}>Submit</button>
+
+                </form>
+            </div>
+            <span className="white-space"><br></br></span>
         </div>
     )
 }
