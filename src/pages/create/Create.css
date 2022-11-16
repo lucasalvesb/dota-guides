@@ -17,7 +17,7 @@
 }
 
 .create button {
-    display: flex;
+    display: block;
     width: 100px;
     font-size: 1em;
     color: rgb(232, 219, 219);
@@ -41,6 +41,16 @@
 }
 
 @media (max-width: 600px) {
+
+    .create.light {
+        margin-left: 0.55em;
+        margin-right: 0.55em;
+    }
+
+    .create.dark {
+        margin-left: 0.55em;
+        margin-right: 0.55em;
+    }
 
     .create h2 {
         font-size: 1em;

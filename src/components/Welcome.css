@@ -1,7 +1,13 @@
 .welcome {
     display: flex;
-    margin-top: 4em;
+    margin-top: 8em;
     flex-wrap: wrap;
+}
+
+@media (max-width: 1150px) {
+    .welcome {
+        margin-top: 2em;
+    }
 }
 
 @media (max-width: 761px) {
@@ -12,31 +18,37 @@
     .card-create-guides.dark {
         margin-left: 0.5em;
         margin-right: 0.5em;
+        font-size: 0.85em;
     }
 
     .card-create-guides.light {
         margin-left: 0.5em;
         margin-right: 0.5em;
+        font-size: 0.85em;
     }
 
     .card-always-free.dark {
         margin-left: 0.5em;
         margin-right: 0.5em;
+        font-size: 0.85em;
     }
 
     .card-always-free.light {
         margin-left: 0.5em;
         margin-right: 0.5em;
+        font-size: 0.85em;
     }
 
     .card-new-guides.dark {
         margin-left: 0.5em;
         margin-right: 0.5em;
+        font-size: 0.85em;
     }
 
     .card-new-guides.light {
         margin-left: 0.5em;
         margin-right: 0.5em;
+        font-size: 0.85em;
     }
 }
 
@@ -53,15 +65,12 @@ h2 {
 }
 
 @media (max-width: 500px) {
-    h2 {
-        font-size: 1em;
-    }
 
 }
 
 .card-new-guides.light {
     flex-direction: column;
-    width: 17em;
+    max-width: 17em;
     margin-top: 2em;
     padding-top: 0.3em;
     align-items: center;
@@ -71,8 +80,9 @@ h2 {
     text-align: center;
     background-color: rgba(250, 246, 246, 0.717);
     padding-bottom: 1.2em;
-    min-width: 15em;
-    min-height: 7em;
+    min-width: 17em;
+    max-height: 9em;
+    min-height: 8em;
     display: flex;
     border-radius: 12px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.32);
@@ -81,7 +91,7 @@ h2 {
 
 .card-new-guides.dark {
     flex-direction: column;
-    width: 17em;
+    max-width: 17em;
     margin-top: 2em;
     padding-top: 0.3em;
     align-items: center;
@@ -91,8 +101,9 @@ h2 {
     text-align: center;
     background-color: rgba(36, 32, 32, 0.42);
     padding-bottom: 1.2em;
-    min-width: 15em;
-    min-height: 7em;
+    min-width: 17em;
+    max-height: 9em;
+    min-height: 8em;
     display: flex;
     border-radius: 12px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.32);
@@ -101,7 +112,7 @@ h2 {
 
 .card-always-free.light {
     flex-direction: column;
-    width: 17em;
+    max-width: 17em;
     margin-top: 2em;
     padding-top: 0.3em;
     align-items: center;
@@ -111,8 +122,9 @@ h2 {
     text-align: center;
     background-color: rgba(250, 246, 246, 0.717);
     padding-bottom: 1.2em;
-    min-width: 15em;
-    min-height: 7em;
+    min-width: 17em;
+    max-height: 9em;
+    min-height: 8em;
     display: flex;
     border-radius: 12px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.32);
@@ -121,7 +133,7 @@ h2 {
 
 .card-always-free.dark {
     flex-direction: column;
-    width: 17em;
+    max-width: 17em;
     margin-top: 2em;
     padding-top: 0.3em;
     align-items: center;
@@ -131,8 +143,9 @@ h2 {
     text-align: center;
     background-color: rgba(36, 32, 32, 0.42);
     padding-bottom: 1.2em;
-    min-width: 15em;
-    min-height: 7em;
+    min-width: 17em;
+    max-height: 9em;
+    min-height: 8em;
     display: flex;
     border-radius: 12px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.32);
@@ -141,7 +154,7 @@ h2 {
 
 .card-create-guides.light {
     flex-direction: column;
-    width: 17em;
+    max-width: 17em;
     margin-top: 2em;
     padding-top: 0.3em;
     align-items: center;
@@ -151,8 +164,9 @@ h2 {
     text-align: center;
     background-color: rgba(250, 246, 246, 0.717);
     padding-bottom: 1.2em;
-    min-width: 15em;
-    min-height: 7em;
+    min-width: 17em;
+    max-height: 9em;
+    min-height: 8em;
     display: flex;
     border-radius: 12px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.32);
@@ -161,7 +175,7 @@ h2 {
 
 .card-create-guides.dark {
     flex-direction: column;
-    width: 17em;
+    max-width: 17em;
     margin-top: 2em;
     padding-top: 0.3em;
     align-items: center;
@@ -171,8 +185,9 @@ h2 {
     text-align: center;
     background-color: rgba(36, 32, 32, 0.42);
     padding-bottom: 1.2em;
-    min-width: 15em;
-    min-height: 7em;
+    min-width: 17em;
+    max-height: 9em;
+    min-height: 8em;
     display: flex;
     border-radius: 12px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.32);
