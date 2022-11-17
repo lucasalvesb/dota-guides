@@ -16,7 +16,6 @@ export default function Search() {
 
     const url = 'https://dota-guides.netlify.app/guidedata?q=' + query
     const { error, isPending, data } = useFetch(url)
-    console.log(data)
 
 
     return (
@@ -24,7 +23,7 @@ export default function Search() {
             <h2 className="page-title">Guides found with "{query}"</h2>
             {error && <p className="error">{error}</p>}
             {isPending && <p className="loading">Loading...</p>}
-            {data && <GuideList guides={data} />}
+            {data && <GuideData guides={data} />}
         </div>
     )
 }

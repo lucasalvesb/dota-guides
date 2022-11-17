@@ -11,7 +11,6 @@ export function HeroProvider({ children }) {
     useEffect(() => {
         fetch(`https://api.opendota.com/api/heroStats`)
           .then((response) => {
-            console.log("Response", response);
             if (!response.ok) {
               throw new Error(
                 `This is an HTTP error: The status is ${response.status}`
