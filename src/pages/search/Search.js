@@ -16,8 +16,8 @@ export default function Search() {
     const queryParams = new URLSearchParams(queryString)
     const query = queryParams.get('q')
 
-    /* const url = 'https://dota-guides.netlify.app/search?q=' + query
-    const { error, isPending, data } = useFetch(url) */
+    const url = 'https://dota-guides.netlify.app/search?q=' + query
+    /*const { error, isPending, data } = useFetch(url) */
 
     const [data, setData] = useState(null)
     const [isPending, setIsPending] = useState(false)
@@ -46,10 +46,6 @@ export default function Search() {
         return () => unsub()
 
     }, [])
-
-
-
-
 
     function findGuides(id) {
         projectFirestore
