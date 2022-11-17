@@ -23,7 +23,7 @@ export default function Search() {
             <h2 className="page-title">Guides found with "{query}"</h2>
             {error && <p className="error">{error}</p>}
             {isPending && <p className="loading">Loading...</p>}
-            <GuideList />
+            {data && <GuideList guides={data} />}
         </div>
     )
 }
