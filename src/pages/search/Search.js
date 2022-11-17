@@ -14,7 +14,7 @@ export default function Search() {
     const queryParams = new URLSearchParams(queryString)
     const query = queryParams.get('q')
 
-    const url = 'https://dota-guides.netlify.app/guidedata?q=' + query
+    const url = 'https://dota-guides.netlify.app/search?q=' + query
     const { error, isPending, data } = useFetch(url)
 
 
@@ -23,7 +23,7 @@ export default function Search() {
             <h2 className="page-title">Guides found with "{query}"</h2>
             {error && <p className="error">{error}</p>}
             {isPending && <p className="loading">Loading...</p>}
-            {data && <GuideData /> && <GuideList guides={data} />}
+            {data && <GuideList guides={data} />}
 
         </div>
     )
