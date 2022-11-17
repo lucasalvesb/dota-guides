@@ -20,10 +20,6 @@
     padding-bottom: 1.2em;
 }
 
-.empty-space {
-    
-}
-
 @media (max-width: 768px) {
     .hero-info {
         flex-direction: column;
