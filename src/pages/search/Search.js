@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router-dom'
 import { useFetch } from '../../hooks/useFetch'
 import GuideList from './../../components/GuideList'
+import { projectFirestore } from '../../firebase/config'
 
 // styles
 import './Search.css'
@@ -17,6 +18,18 @@ export default function Search() {
     const url = 'https://dota-guides.netlify.app/search?q=' + query
     const { error, isPending, data } = useFetch(url)
 
+    findGuides()
+
+    function findGuides() {
+        projectFirestore
+            .collection('guides')
+            .where('guides', '==', query)
+            .get()
+            .then(snapshot => {
+                const guides = snapshot.docs.map(doc => doc.data())
+                console.log(guides)
+            })
+    }
 
     return (
         <div>
