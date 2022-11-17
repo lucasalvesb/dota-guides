@@ -47,18 +47,18 @@ export default function Search() {
 
     }, [])
 
-    function findGuides(id) {
+    function findGuides() {
         projectFirestore
             .collection('guides')
             .where('guides.title', '==', query)
             .get()
             .then(snapshot => {
                 const guides = snapshot.docs.map(doc => doc.data())
-                console.log(guides)
             })
+            console.log(findGuides())
     }
     
-    findGuides()
+
 
     return (
         <div>
@@ -66,7 +66,6 @@ export default function Search() {
             {error && <p className="error">{error}</p>}
             {isPending && <p className="loading">Loading...</p>}
             {data && <GuideList guides={data} />}
-            <p>{data && data.length}</p>
         </div>
     )
 }
