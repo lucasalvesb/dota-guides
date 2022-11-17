@@ -18,7 +18,7 @@ export default function Search() {
     const url = 'https://dota-guides.netlify.app/search?q=' + query
     const { error, isPending, data } = useFetch(url) */
 
-    gittconst [data, setData] = useState(null)
+    const [data, setData] = useState(null)
     const [isPending, setIsPending] = useState(false)
     const [error, setError] = useState(false)
 
