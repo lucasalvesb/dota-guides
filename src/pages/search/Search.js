@@ -11,19 +11,19 @@ import './Search.css'
 import GuideData from '../guidedata/GuideData'
 
 export default function Search() {
-    const queryString = useLocation().search
+/*     const queryString = useLocation().search
     const queryParams = new URLSearchParams(queryString)
     const query = queryParams.get('q')
 
     const url = 'https://dota-guides.netlify.app/search?q=' + query
-    const { error, isPending, data } = useFetch(url)
+    const { error, isPending, data } = useFetch(url) */
 
     findGuides()
 
-    function findGuides() {
+    function findGuides(id) {
         projectFirestore
             .collection('guides')
-            .where('guides', '==', query)
+            .where('guides.title', '==', query)
             .get()
             .then(snapshot => {
                 const guides = snapshot.docs.map(doc => doc.data())
