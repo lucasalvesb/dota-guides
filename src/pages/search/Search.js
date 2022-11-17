@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom'
-import { useFetch } from '../../hooks/useFetch'
+/* import { useFetch } from '../../hooks/useFetch' */
+import { useEffect, useState } from 'react'
 import GuideList from './../../components/GuideList'
 import { projectFirestore } from '../../firebase/config'
 
@@ -11,11 +12,11 @@ import './Search.css'
 import GuideData from '../guidedata/GuideData'
 
 export default function Search() {
-/*  const queryString = useLocation().search
+    const queryString = useLocation().search
     const queryParams = new URLSearchParams(queryString)
     const query = queryParams.get('q')
 
-    const url = 'https://dota-guides.netlify.app/search?q=' + query
+    /* const url = 'https://dota-guides.netlify.app/search?q=' + query
     const { error, isPending, data } = useFetch(url) */
 
     const [data, setData] = useState(null)
