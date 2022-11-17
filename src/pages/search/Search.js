@@ -9,25 +9,7 @@ import './Search.css'
 
 import GuideData from '../guidedata/GuideData'
 
-
-
 export default function Search() {
-    async function getMultiple(db) {
-    const guidesRef = db.collection('guides')
-    const snapshot = await guidesRef.where(`${query}`, '==', true).get()
-
-    if (snapshot.empty) {
-        console.log('no guides found')
-        return
-    }
-    if (snapshot.length > 0) {
-    snapshot.forEach(doc => {
-    console.log(doc.id, '=>', doc.data())
-    })
-    }
-}
-
-    
     const queryString = useLocation().search
     const queryParams = new URLSearchParams(queryString)
     const query = queryParams.get('q')
@@ -36,11 +18,12 @@ export default function Search() {
     const { error, isPending, data } = useFetch(url)
 
 
-
-
     return (
         <div>
-            
+            <h2 className="page-title">Guides found with "{query}"</h2>
+            {error && <p className="error">{error}</p>}
+            {isPending && <p className="loading">Loading...</p>}
+            {data && <GuideList guides={data} />}
         </div>
     )
 }
