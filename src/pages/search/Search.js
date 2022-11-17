@@ -15,7 +15,7 @@ export default function Search() {
     const query = queryParams.get('q')
 
     const url = 'https://dota-guides.netlify.app/search?q=' + query
-    const { error, isPending, data } = useFetch(url, method = 'GET')
+    const { error, isPending, data } = useFetch(url)
 
 
     return (

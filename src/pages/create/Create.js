@@ -4,6 +4,7 @@ import { projectFirestore } from '../../firebase/config'
 import { useTheme } from '../../hooks/useTheme'
 
 
+
 // styles
 
 import './Create.css'
@@ -19,8 +20,6 @@ export default function Create() {
     const navigate = useNavigate()
     const { mode } = useTheme()
     const { color } = useTheme()
-
-    
 
     const handleSubmit = async (e) => {
         e.preventDefault()

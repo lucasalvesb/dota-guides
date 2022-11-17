@@ -17,4 +17,3 @@ firebase.initializeApp(firebaseConfig)
 const projectFirestore = firebase.firestore()
 
 export { projectFirestore }
-
