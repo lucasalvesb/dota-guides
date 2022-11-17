@@ -37,6 +37,7 @@ export default function Search() {
             {error && <p className="error">{error}</p>}
             {isPending && <p className="loading">Loading...</p>}
             {data && <GuideList guides={data} />}
+            <div> {guides} </div>
         </div>
     )
 }
