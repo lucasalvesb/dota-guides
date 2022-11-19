@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom'
-/* import { useFetch } from '../../hooks/useFetch' */
+import { useFetch } from '../../hooks/useFetch'
 import { useEffect, useState } from 'react'
 import GuideList from './../../components/GuideList'
 import { projectFirestore } from '../../firebase/config'
@@ -12,14 +12,32 @@ import './Search.css'
 import GuideData from '../guidedata/GuideData'
 
 export default function Search() {
+    
+    //COMO ERA COM O DB.JSON
+
     const queryString = useLocation().search
     const queryParams = new URLSearchParams(queryString)
     const query = queryParams.get('q')
 
-    const url = 'https://dota-guides.netlify.app/search?q=' + query
-    /*const { error, isPending, data } = useFetch(url) */
+    const url = 'http://cooking-ninja-site-42f4a.appspot.com?q=' + query
+    const { error, isPending, data } = useFetch(url) 
 
-    const [data, setData] = useState(null)
+
+    return (
+        <div>
+            {<h2 className="page-title">Guides found with "{query}"</h2>}
+            {error && <p className="error">{error}</p>}
+            {isPending && <p className="loading">Loading...</p>}
+            {data && <GuideList guides={data} />}
+        </div>
+    )
+}
+
+
+
+// TENTATIVAS FALHAS
+
+/*  const [data, setData] = useState(null)
     const [isPending, setIsPending] = useState(false)
     const [error, setError] = useState(false)
 
@@ -56,16 +74,4 @@ export default function Search() {
                 const guides = snapshot.docs.map(doc => doc.data())
             })
             console.log(findGuides())
-    }
-    
-
-
-    return (
-        <div>
-            <h2 className="page-title">Guides found with "{query}"</h2>
-            {error && <p className="error">{error}</p>}
-            {isPending && <p className="loading">Loading...</p>}
-            {data && <GuideList guides={data} />}
-        </div>
-    )
-}
+    } */
