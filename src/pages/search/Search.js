@@ -19,7 +19,7 @@ export default function Search() {
     const queryParams = new URLSearchParams(queryString)
     const query = queryParams.get('q')
 
-    const url = 'http://cooking-ninja-site-42f4a.appspot.com?q=' + query
+    const url = 'https://cooking-ninja-site-42f4a.appspot.com?q=' + query
     const { error, isPending, data } = useFetch(url) 
 
 
