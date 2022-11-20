@@ -1,12 +1,11 @@
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { HeroContext } from "../context/HeroContext";
-import Hero from "../pages/hero/Hero";
 
 import "./HeroList.css";
 
 export default function HeroList() {
-  const { heroes, loading, error, setHeroes, setSelectedHero } = useContext(HeroContext);
+  const { heroes, loading, error, setSelectedHero } = useContext(HeroContext);
 
   return (
     <div className="box-hero-list">
@@ -24,6 +23,7 @@ export default function HeroList() {
                   onClick={() => {
                     setSelectedHero(item)
                   }}
+                  alt="heroes"
                 />{" "}
               </Link>
             ))}

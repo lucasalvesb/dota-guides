@@ -17,7 +17,7 @@ import { useTheme } from './hooks/useTheme'
 
 
 function App() {
-  const { mode, text } = useTheme()
+  const { mode } = useTheme()
 
   return (
         <div className={`App ${mode}`}>

@@ -3,8 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import { projectFirestore } from '../../firebase/config'
 import { useTheme } from '../../hooks/useTheme'
 
-
-
 // styles
 
 import './Create.css'

@@ -2,7 +2,7 @@
     max-width: 23em;
     margin: 40px auto;
     text-align: center;
-    background: #fff;
+    background-color: rgba(250, 246, 246, 0.717);
     padding: 10px;
     box-sizing: border-box;
     border-radius: 12px;
@@ -10,7 +10,19 @@
 
 .button-seen {
     margin-bottom: 1em;
+    display: block;
+    width: 9em;
+    font-size: 1em;
+    color: rgb(232, 219, 219);
+    padding: 8px 8px;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 20px auto;
+    text-align: center;
 }
+
 
 .guide ul {
     padding: 0;
@@ -39,7 +51,11 @@
 }
 
 .guide.dark { 
-    background: #555;
+    background-color: rgba(36, 32, 32, 0.758);
     color: #e4e4e4;
+}
+
+.guide-title {
+    margin-top: 0.5em;
 }
 

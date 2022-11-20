@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useContext } from "react";
+import { useEffect, useContext } from "react";
 import { HeroContext } from "../../context/HeroContext";
 import { useParams } from 'react-router-dom'
 import { useTheme } from '../../hooks/useTheme'
@@ -26,10 +26,12 @@ export default function Hero() {
     
     return (
         
-        <div >
+        <div className="container-hero">
             <div className={`hero-info ${mode}`}>
-                <img className="hero-img" src={"https://api.opendota.com" + selectedHero.img}/>
-                <h1> {selectedHero.localized_name} </h1>
+                <img className="hero-img" 
+                    src={"https://api.opendota.com" + selectedHero.img}
+                    alt="selected hero"/>
+                <h1 className="hero-title-card"> {selectedHero.localized_name} </h1>
                 <p className="title-hero-page">Primary attribute:</p>
                 <p> {selectedHero.primary_attr.charAt(0).toUpperCase()+selectedHero.primary_attr.slice(1)}</p> 
                 <p className="title-hero-page"> Attack type: </p>

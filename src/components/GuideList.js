@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import { useTheme } from '../hooks/useTheme'
 import Trashcan from '../assets/trashcan.svg'
 import { projectFirestore } from '../firebase/config'
-import { useEffect, useState } from 'react'
 
 
 // styles
@@ -32,6 +31,7 @@ export default function GuideList({ guides }) {
                         className={`delete ${mode}`}
                         src={Trashcan}
                         onClick={() => handleClick(guide.id)}
+                        alt="delete"
                     />
                 </div>
             ))}

@@ -20,6 +20,10 @@
     padding-bottom: 1.2em;
 }
 
+.hero-title-card {
+    padding-left: 0;
+}
+
 @media (max-width: 768px) {
     .hero-info {
         flex-direction: column;

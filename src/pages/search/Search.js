@@ -1,16 +1,10 @@
 import { useLocation } from 'react-router-dom'
-import { useFetch } from '../../hooks/useFetch'
 import { useEffect, useState } from 'react'
 import GuideList from './../../components/GuideList'
 import { projectFirestore } from '../../firebase/config'
-import firebaseConfig from '../../firebase/config'
 
 // styles
 import './Search.css'
-
-//components
-
-import GuideData from '../guidedata/GuideData'
 
 export default function Search() {
 
