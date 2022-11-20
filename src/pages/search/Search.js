@@ -13,69 +13,53 @@ import './Search.css'
 import GuideData from '../guidedata/GuideData'
 
 export default function Search() {
-    
-    //COMO ERA COM O DB.JSON
 
     const queryString = useLocation().search
     const queryParams = new URLSearchParams(queryString)
     const query = queryParams.get('q')
 
-    const url = 'https://dota-guides.netlify.app/search?q=' + query
-    const { error, isPending, data } = useFetch(url) 
+    const [data, setData] = useState(null)
+    const [isPending, setIsPending] = useState(false)
+    const [error, setError] = useState(false)
+
+    useEffect(() => {
+    setIsPending(true);
+
+    const unsub = projectFirestore.collection("guides").onSnapshot(
+    (snapshot) => {
+        if (snapshot.empty) {
+        setError("No guides to load")
+        setIsPending(false);
+        } else {
+        let results = []
+        snapshot.docs.forEach((doc) => {
+            results.push({ ...doc.data(), id: doc.id });
+        })
+        setData(() => {
+            let filteredGuides = results.filter((guide) =>
+            guide.title.toLowerCase().includes(query.toLowerCase())
+            )
+            return filteredGuides;
+        })
+        setIsPending(false)
+        }
+    },
+    (err) => {
+        setError(err.message);
+        setIsPending(false);
+    }
+    );
+
+    return () => unsub();
+}, [query]);
 
     
     return (
         <div>
-            {<h2 className="page-title">Guides found with ""</h2>}
+            {<h2 className="page-title">Guides found with "{query}"</h2>}
             {error && <p className="error">{error}</p>}
             {isPending && <p className="loading">Loading...</p>}
             {data && <GuideList guides={data} />}
         </div>
     )
 }
-
-
-
-// TENTATIVAS FALHAS (com milhões de alterações em cada)
-
-//TENTATIVA 1
-/*  const [data, setData] = useState(null)
-    const [isPending, setIsPending] = useState(false)
-    const [error, setError] = useState(false)
-
-    useEffect(() => {
-        setIsPending(true)
-
-        const unsub = projectFirestore.collection('guides').where('title', '==', query.title).onSnapshot((snapshot) => {
-            if (snapshot.empty) {
-                setError('No guides to load')
-                setIsPending(false)
-            } else {
-                let results = [] 
-                snapshot.docs.forEach(doc => {
-                    results.push({ id: doc.id, ...doc.data() })
-                })
-                setData(results)
-                setIsPending(false)
-            }
-        }, (err) => {
-            setError(err.message)
-            setIsPending(false)
-        })
-
-        return () => unsub()
-
-    }, [])
-
-
-//TENTATIVA 2
-    function findGuides() {
-        projectFirestore
-            .collection('guides')
-            .where('guides.title', '==', query)
-            .get()
-            .then(snapshot => {
-                const guides = snapshot.docs.map(doc => doc.data())
-            })
-            console.log(findGuides())
-    } */
