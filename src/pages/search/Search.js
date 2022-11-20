@@ -3,6 +3,7 @@ import { useFetch } from '../../hooks/useFetch'
 import { useEffect, useState } from 'react'
 import GuideList from './../../components/GuideList'
 import { projectFirestore } from '../../firebase/config'
+import firebaseConfig from '../../firebase/config'
 
 // styles
 import './Search.css'
@@ -19,13 +20,13 @@ export default function Search() {
     const queryParams = new URLSearchParams(queryString)
     const query = queryParams.get('q')
 
-    const url = 'https://cooking-ninja-site-42f4a.appspot.com?q=' + query
+    const url = 'https://dota-guides.netlify.app/search?q=' + query
     const { error, isPending, data } = useFetch(url) 
 
-
+    
     return (
         <div>
-            {<h2 className="page-title">Guides found with "{query}"</h2>}
+            {<h2 className="page-title">Guides found with ""</h2>}
             {error && <p className="error">{error}</p>}
             {isPending && <p className="loading">Loading...</p>}
             {data && <GuideList guides={data} />}
@@ -35,8 +36,9 @@ export default function Search() {
 
 
 
-// TENTATIVAS FALHAS
+// TENTATIVAS FALHAS (com milhões de alterações em cada)
 
+//TENTATIVA 1
 /*  const [data, setData] = useState(null)
     const [isPending, setIsPending] = useState(false)
     const [error, setError] = useState(false)
@@ -44,7 +46,7 @@ export default function Search() {
     useEffect(() => {
         setIsPending(true)
 
-        const unsub = projectFirestore.collection('guides').onSnapshot((snapshot) => {
+        const unsub = projectFirestore.collection('guides').where('title', '==', query.title).onSnapshot((snapshot) => {
             if (snapshot.empty) {
                 setError('No guides to load')
                 setIsPending(false)
@@ -65,6 +67,8 @@ export default function Search() {
 
     }, [])
 
+
+//TENTATIVA 2
     function findGuides() {
         projectFirestore
             .collection('guides')
