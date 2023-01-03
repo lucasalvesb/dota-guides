@@ -5,9 +5,9 @@
 ## Sumário
 
 * [Tecnologias utilizadas](https://github.com/lucasalvesb/dota-guides/#tecnologias-utilizadas)
-* [Instruções para rodar o projeto](https://github.com/lucasalvesb/dota-guides/#instrucoes)AJUSTAR
-* [Desenvolvimento](https://github.com/lucasalvesb/dota-guides/#desenvolvimento)AJUSTAR
-* [Resultado](https://github.com/lucasalvesb/dota-guides/#resultado)AJUSTAR
+* [Instruções para rodar o projeto](https://github.com/lucasalvesb/dota-guides#instru%C3%A7%C3%B5es-para-rodar-o-projeto)
+* [Desenvolvimento](https://github.com/lucasalvesb/dota-guides/#desenvolvimento)
+* [Resultado](https://github.com/lucasalvesb/dota-guides/#resultado)
 
 ## Tecnologias utilizadas
 
