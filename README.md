@@ -129,7 +129,6 @@ Para hospedar o site, utilizei da plataforma Netlify atrelada ao meu github, par
 ### Responsividade
 
 ![image](https://user-images.githubusercontent.com/71532408/210451504-65beeb35-5f60-4dc7-b9a5-8c94f91db707.png)
-![image](https://user-images.githubusercontent.com/71532408/210451503-3563e675-def4-47d8-a3dc-ddedd5713173.png)
 ![image](https://user-images.githubusercontent.com/71532408/210451496-c1d026b1-d90d-47d0-8821-afb9a7b52751.png)
 
 
