@@ -6,7 +6,6 @@
 
 * [Tecnologias utilizadas](https://github.com/lucasalvesb/dota-guides/#tecnologias-utilizadas)
 * [Instruções para rodar o projeto](https://github.com/lucasalvesb/dota-guides/#instrucoes)AJUSTAR
-* [Organização e estruturação do projeto](https://github.com/lucasalvesb/dota-guides/#organizacao)AJUSTAR
 * [Desenvolvimento](https://github.com/lucasalvesb/dota-guides/#desenvolvimento)AJUSTAR
 * [Resultado](https://github.com/lucasalvesb/dota-guides/#resultado)AJUSTAR
 
@@ -57,3 +56,26 @@ npm install
 ```
 npm run start
 ```
+## Desenvolvimento
+
+### Fetch
+
+Para realizar o fetch na API com as estatísticas dos heróis do Dota 2, foi utilizado o Fetch API. 
+
+### Estilização
+
+A estilização foi feita em CSS puro.
+
+### Backend 
+
+Para o backend, utilizei o BaaS (backend-as-a-service) Firebase.
+
+### Ícones e fontes
+
+Foram utilizados do Google Fonts. 
+
+### Hospedagem
+
+Para hospedar o site, utilizei da plataforma Netlify atrelada ao meu github, para que, toda vez que eu fizesse uma alteração, ele automaticamente fizesse o redeploy.
+
+## Resultado
