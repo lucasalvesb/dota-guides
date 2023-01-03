@@ -5,7 +5,7 @@
 ## Sumário
 
 * [Tecnologias utilizadas](https://github.com/lucasalvesb/dota-guides/#tecnologias-utilizadas)
-* [Instruções para rodar o projeto](https://github.com/lucasalvesb/dota-guides#instru%C3%A7%C3%B5es-para-rodar-o-projeto)
+* [Instruções para executar o projeto](https://github.com/lucasalvesb/dota-guides#instru%C3%A7%C3%B5es-para-executar-o-projeto)
 * [Desenvolvimento](https://github.com/lucasalvesb/dota-guides/#desenvolvimento)
 * [Resultado](https://github.com/lucasalvesb/dota-guides/#resultado)
 
@@ -19,13 +19,13 @@
 * [Google Fonts/Icons](https://fonts.google.com/)
 * [Netlify](https://www.netlify.com/)
 
-## Instruções para rodar o projeto
+## Instruções para executar o projeto
 
 O projeto pode ser acessado em produção através do seguinte link:
 
 * [Dota Guides](https://dota-guides.netlify.app/)
 
-Caso prefira rodar localmente, segue instruções:
+Caso prefira executar localmente, segue instruções:
 
 ### Tenha instalado na sua máquina:
 ```
