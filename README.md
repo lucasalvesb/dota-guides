@@ -25,7 +25,7 @@ O projeto pode ser acessado em produção através do seguinte link:
 
 * [Dota Guides](https://dota-guides.netlify.app/)
 
-Caso prefira executar localmente, segue instruções:
+Caso deseje executar localmente, segue instruções:
 
 ### Tenha instalado na sua máquina:
 ```
